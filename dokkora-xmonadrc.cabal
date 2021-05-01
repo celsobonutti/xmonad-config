@@ -1,0 +1,32 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           dokkora-xmonadrc
+version:        0.0.0
+category:       System
+author:         Celso Bonutti
+maintainer:     Celso Bonutti <i.am@cel.so>
+license:        BSD-3
+build-type:     Simple
+
+executable xmonad-dokkora
+  main-is: xmonad.hs
+  other-modules:
+      Paths_dokkora_xmonadrc
+  hs-source-dirs:
+      ./
+  ghc-options: -Wall -threaded -O2
+  build-depends:
+      X11
+    , X11-xft
+    , base
+    , containers
+    , mtl
+    , transformers
+    , xmobar >=0.37
+    , xmonad
+    , xmonad-contrib
+  default-language: Haskell2010

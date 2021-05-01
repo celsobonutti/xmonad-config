@@ -1,0 +1,7 @@
+cradle:
+  stack:
+    - path: "././xmonad.hs"
+      component: "dokkora-xmonadrc:exe:xmonad-dokkora"
+
+    - path: "././Paths_dokkora_xmonadrc.hs"
+      component: "dokkora-xmonadrc:exe:xmonad-dokkora"

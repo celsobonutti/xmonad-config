@@ -1,0 +1,26 @@
+name:         dokkora-xmonadrc
+license:      BSD-3
+author:       Celso Bonutti
+maintainer:   Celso Bonutti <i.am@cel.so>
+category:     System
+
+dependencies:
+  - X11
+  - X11-xft
+  - base
+  - xmonad
+  - xmonad-contrib
+  - xmobar >= 0.37
+  - transformers
+  - mtl
+  - containers
+
+ghc-options:
+  - -Wall
+  - -threaded
+  - -O2
+
+executables:
+  xmonad-dokkora:
+    source-dirs: .
+    main:        xmonad.hs

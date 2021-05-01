@@ -1,0 +1,26 @@
+resolver:
+  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/9.yaml
+
+packages:
+  - '.'
+
+extra-deps: 
+  - xmobar-0.37@sha256:42cfb68788901364a1b4ddfdc213106e18851dda2575420e532ee31c4cce4e51,12020
+
+
+flags: {}
+extra-package-dbs: []
+
+nix:
+    packages:
+      - pkgconfig
+      - autoconf
+      - gcc
+      - xorg.libX11
+      - xorg.libXext
+      - xorg.libXft
+      - xorg.libXinerama
+      - xorg.libXpm
+      - xorg.libXrandr
+      - xorg.libXrender
+      - xorg.libXScrnSaver

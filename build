@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+stack build :xmonad-dokkora --verbosity error
+stack install :xmonad-dokkora --local-bin-path bin/ --verbosity error
+mv bin/xmonad-dokkora "$1"
