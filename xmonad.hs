@@ -71,7 +71,7 @@ myLayout = resizableTall ||| fullscreen
   fullscreen = noBorders Full
 
 myStartup = do
-  spawn "flameshot &"
+  spawn "flameshot & stalonetray &"
 
 myTerminal = "alacritty"
 
