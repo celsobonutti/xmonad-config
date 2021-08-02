@@ -28,8 +28,7 @@ main = do
         , borderWidth        = 3
         , focusedBorderColor = "purple"
         , layoutHook         = myLayout
-        , startupHook        = myStartup
-        , manageHook         = manageDocks <+> manageHook desktopConfig
+        , manageHook         = manageDocks <+> manageHook desktopConfig <+> myManage
         , logHook            = dynamicLogWithPP $ xmobarPP
                                  { ppOutput = hPutStrLn xmproc
                                  , ppTitle = xmobarColor "green" "" . shorten 50
@@ -70,12 +69,12 @@ myLayout = resizableTall ||| fullscreen
     hiddenWindows . avoidStruts $ ResizableTall 1 (3 / 100) (1 / 2) []
   fullscreen = noBorders Full
 
-myStartup = do
-  spawn "flameshot & stalonetray &"
-
 myTerminal = "alacritty"
 
 myMod = mod4Mask
+
+myManage = composeAll [ title =? "Media viewer" --> doFloat
+                      ]
 
 rofiCommand =
   "rofi -modi drun -show drun -line-padding 4 -show-icons -drun-icon-theme \"Arc-X-D\" -font \"Iosevka 14\""
