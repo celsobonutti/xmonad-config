@@ -1,8 +1,9 @@
-resolver:
-  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/18/5.yaml
+resolver: lts-18.6
 
 packages:
   - '.'
+  - xmonad
+  - xmonad-contrib
 
 extra-deps: 
   - xmobar-0.37@sha256:42cfb68788901364a1b4ddfdc213106e18851dda2575420e532ee31c4cce4e51,12020
